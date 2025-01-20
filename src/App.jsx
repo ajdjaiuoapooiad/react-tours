@@ -40,6 +40,19 @@ const App = () => {
     )
   }
 
+  if(tours.length === 0){
+    return (
+      <main>
+        <div className="title">
+          <h2>no tours left</h2>
+          <button type="button" className="btn" onClick={() => fetchData()}>refresh</button>
+        </div>
+      </main>
+    )
+  }
+
+
+
   return (
     <main>
       <Tours tours={tours} removeTours={removeTours} />
