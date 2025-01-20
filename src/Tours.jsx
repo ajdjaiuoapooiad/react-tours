@@ -9,9 +9,11 @@ const Tours = ({tours}) => {
             <div className='title-underline'></div>
         </div>
         <div className='tours'>
-            {tours.map(() => {
+            {tours.map((tour) => {
+                console.log(tour);
+                
                 return (
-                    <Tour key={tours.id} {...tours} />
+                    <Tour key={tour.id} {...tour} />
                 )
             })}
         </div>
